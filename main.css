@@ -190,3 +190,50 @@ body {
 .highlights-image img {
   width: 100%;
 }
+
+/*------------------------------------
+                        footer
+  ------------------------------------*/
+
+.footer {
+  margin: 70px 0;
+}
+
+.footer-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-item img {
+  width: 100%;
+  max-width: 480px;
+}
+
+.footer-item .social-links {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.social-links .social-link {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e7e7e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 7px;
+  transition: all 0.2s linear;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+  background-color: #e02c6d;
+  color: #fff;
+}
+
+.social-link .social-link i {
+  font-size: 18px;
+  color: #969bab;
+}
