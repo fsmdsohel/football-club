@@ -154,3 +154,39 @@ body {
 .player-deader {
   margin: 15px 0;
 }
+
+/*------------------------------------
+                all highlisht section
+  ------------------------------------*/
+
+.highlights {
+  display: flex;
+  flex-direction: row;
+  margin: 70px 15px;
+}
+
+.highlights-content,
+.highlights-image {
+  flex: 50%;
+}
+
+.highlights-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.highlights-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.highlights-content p {
+  width: 80%;
+}
+.watch-button {
+  margin: 20px 0;
+}
+
+.highlights-image img {
+  width: 100%;
+}
