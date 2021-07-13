@@ -32,7 +32,7 @@ body {
 .link__btn {
   background-color: #e02c6d;
   color: #fff;
-  padding: 10px 25px;
+  padding: 7px 25px;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
@@ -94,6 +94,14 @@ body {
   margin: 0 15px;
   padding: 20px 0;
 }
+.nav-toggle-btn {
+  display: none;
+}
+.nav-toggle-btn .fas {
+  font-size: 24px;
+  color: #fff;
+  padding: 15px;
+}
 
 .nav-items {
   display: flex;
@@ -117,6 +125,10 @@ body {
   background-color: #ffffff2f;
 }
 
+.login-btn .link__btn i {
+  margin-right: 5px;
+}
+
 /*------------------------------------
                 home section
   ------------------------------------*/
@@ -132,7 +144,7 @@ body {
 }
 .home-content,
 .home-image {
-  width: 50%;
+  flex: 50%;
 }
 
 .home-content {
@@ -211,13 +223,11 @@ body {
 .highlights-content,
 .highlights-image {
   flex: 50%;
-}
-
-.highlights-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .highlights-content h1 {
   font-size: 48px;
   font-weight: 700;
@@ -279,4 +289,82 @@ body {
 .social-link .social-link i {
   font-size: 18px;
   color: #969bab;
+}
+
+/*------------------------------------
+                    media query
+  ------------------------------------*/
+
+@media only screen and (max-width: 1000px) {
+  .home-content .content-header h1 {
+    font-size: 50px;
+  }
+  .highlights-content h1 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .home-content .content-header h1 {
+    font-size: 45px;
+  }
+  .nav-items {
+    display: none;
+  }
+  .nav-toggle-btn {
+    display: block;
+  }
+  .highlights-content h1 {
+    font-size: 35px;
+  }
+}
+/* tablet pc  */
+
+@media only screen and (max-width: 768px) {
+  .login-btn .link__btn {
+    font-size: 14px;
+  }
+  .navbar {
+    padding: 10px 0;
+  }
+  .home {
+    flex-direction: column-reverse;
+  }
+  .home-content,
+  .home-image {
+    flex: 100%;
+  }
+  .home-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .home-image img {
+    width: 80%;
+  }
+  .player-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .highlights {
+    flex-direction: column;
+  }
+  .footer-item img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .home-content .content-header h1 {
+    font-size: 40px;
+  }
+  .highlights-content h1 {
+    font-size: 30px;
+  }
+  .player-cards {
+    grid-template-columns: 1fr;
+  }
+  .footer-item img {
+    width: 100%;
+    max-width: 230px;
+  }
 }
