@@ -18,6 +18,7 @@ body {
   width: 100%;
   max-width: 1160px;
 }
+#news,
 #contact-us,
 #navbar,
 #home,
@@ -201,13 +202,30 @@ body {
 .player-item {
   padding: 15px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+  border: 1px solid rgba(221, 221, 221, 0.322);
+}
+.player-item:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.player-item .player-image {
+  overflow: hidden;
 }
 .player-item .player-image img {
   width: 100%;
+  transition: all 0.5s ease;
+}
+.player-item:hover .player-image img {
+  transform: scale(1.2);
 }
 
 .player-deader {
   margin: 15px 0;
+}
+.view-more-button {
+  margin-top: 15px;
 }
 
 /*------------------------------------
@@ -242,6 +260,80 @@ body {
 
 .highlights-image img {
   width: 100%;
+}
+
+/*------------------------------------
+                 contact us
+  ------------------------------------*/
+
+.news {
+  margin: 70px 15px;
+}
+
+.news-header h1 {
+  font-size: 48px;
+  color: #1a1919;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.news-item {
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.news-item img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.news-item .news-content {
+  margin: 0px 15px 0px 15px;
+  line-height: 1.2;
+}
+
+.news-content small {
+  color: #757575;
+  font-weight: 600;
+  margin: 15px 0;
+  display: inline-block;
+}
+
+.news-content h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.icon-wrapper ul {
+  display: flex;
+  list-style: none;
+  margin: 15px 0;
+}
+
+.icon-wrapper ul li {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.icon-wrapper ul li i {
+  transition: all 0.2s ease;
+}
+.icon-wrapper ul li:hover i {
+  color: #e02c6d;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
 }
 
 /*------------------------------------
@@ -398,6 +490,17 @@ form textarea {
   .get-in-touch {
     flex: 100%;
   }
+  .news-item {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .news-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .news-header h1 {
+    font-size: 35px;
+  }
 }
 @media only screen and (max-width: 800px) {
   .home-content .content-header h1 {
@@ -446,6 +549,9 @@ form textarea {
   .footer-item img {
     width: 100%;
     max-width: 300px;
+  }
+  .news-cards {
+    grid-template-columns: 1fr;
   }
 }
 
